@@ -1,0 +1,62 @@
+# Offline checks for the examples: no key, no network calls to Lanesra.
+#
+# GitHub-hosted runners only. This repository is meant to be public, and a
+# public repository must never run pull requests on a self-hosted runner.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile
+        run: python -m py_compile examples/python/*.py tests/python/*.py
+      - name: Test
+        run: python -m unittest discover -s tests/python -v
+
+  node:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Syntax
+        run: for f in examples/node/*.mjs; do node --check "$f"; done
+      - name: Test
+        run: node --test tests/node/examples.test.mjs
+
+  repository:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Shell scripts
+        run: shellcheck examples/curl/*.sh examples/mcp-clients/*.sh
+      - name: JSON files
+        run: for f in examples/mcp-clients/*.json tests/fixtures/*.json examples/node/package.json; do python3 -m json.tool "$f" > /dev/null; done
+      - name: No real API keys
+        run: |
+          if grep -rEn 'lns_live_[a-z0-9]{32,}' --exclude-dir=.git .; then
+            echo "::error::A real Lanesra API key is committed. Revoke it in the app, then remove it."
+            exit 1
+          fi

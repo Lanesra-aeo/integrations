@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "lanesra": {
+      "type": "http",
+      "url": "https://app.lanesra.ai/mcp",
+      "headers": { "Authorization": "Bearer lns_live_your_key_here" }
+    }
+  }
+}

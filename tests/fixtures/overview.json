@@ -1,0 +1,55 @@
+{
+  "project": "acme",
+  "locale": "en-US",
+  "market": "United States",
+  "language": "en",
+  "brand": "Acme",
+  "capturedAt": "2026-08-10T07:46:33.726Z",
+  "period": {
+    "kind": "range",
+    "from": "2026-08-01",
+    "to": "2026-08-31",
+    "run": null,
+    "limitedRunAnswers": null
+  },
+  "answers": 60,
+  "scope": "discovery",
+  "engines": [
+    "ChatGPT",
+    "Perplexity",
+    "Gemini"
+  ],
+  "own": {
+    "brand": "Acme",
+    "slug": "acme",
+    "isOwn": true,
+    "aliases": [],
+    "domains": [
+      "acme.example"
+    ],
+    "visibility": 78.3,
+    "shareOfVoice": 21.7,
+    "avgPosition": 1.6,
+    "score": 63.3,
+    "sentiment": 70,
+    "nps": 0,
+    "promoters": 10,
+    "passives": 27,
+    "detractors": 10,
+    "counted": 47,
+    "mentions": 47,
+    "scoredAnswers": 60
+  },
+  "recognition": {
+    "brand": "Acme",
+    "isOwn": true,
+    "answers": 0,
+    "namedPct": null,
+    "sentiment": null
+  },
+  "alternatives": [],
+  "rankAmongTracked": 1,
+  "trackedBrands": 10,
+  "prompts": 30,
+  "explainWith": "explain_metric"
+}

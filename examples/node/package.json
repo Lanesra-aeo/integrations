@@ -1,0 +1,19 @@
+{
+  "name": "lanesra-integrations-node-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Examples for reading Lanesra AI-visibility data from Node.js",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "quickstart": "node quickstart.mjs",
+    "report": "node weekly-report.mjs",
+    "sdk": "node mcp-sdk.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "project": "acme",
+  "locale": "en-US",
+  "market": "United States",
+  "language": "en",
+  "brand": "Acme",
+  "capturedAt": "2026-08-10T07:46:33.726Z",
+  "period": {
+    "kind": "range",
+    "from": "2026-08-01",
+    "to": "2026-08-31",
+    "run": null,
+    "limitedRunAnswers": null
+  },
+  "answers": 60,
+  "scope": "discovery",
+  "engines": [
+    "ChatGPT",
+    "Perplexity",
+    "Gemini"
+  ],
+  "totalBrands": 10,
+  "shownBrands": 3,
+  "brands": [
+    {
+      "brand": "Acme",
+      "slug": "acme",
+      "isOwn": true,
+      "aliases": [],
+      "domains": [
+        "acme.example"
+      ],
+      "visibility": 78.3,
+      "shareOfVoice": 21.7,
+      "avgPosition": 1.6,
+      "score": 63.3,
+      "sentiment": 70,
+      "nps": 0,
+      "promoters": 10,
+      "passives": 27,
+      "detractors": 10,
+      "counted": 47,
+      "mentions": 47,
+      "scoredAnswers": 60
+    },
+    {
+      "brand": "Initech",
+      "slug": "initech",
+      "isOwn": false,
+      "aliases": [],
+      "domains": [
+        "initech.example"
+      ],
+      "visibility": 66.7,
+      "shareOfVoice": 18.4,
+      "avgPosition": 2.6,
+      "score": 44.3,
+      "sentiment": 74,
+      "nps": 20,
+      "promoters": 10,
+      "passives": 28,
+      "detractors": 2,
+      "counted": 40,
+      "mentions": 40,
+      "scoredAnswers": 60
+    },
+    {
+      "brand": "Wonka",
+      "slug": "wonka",
+      "isOwn": false,
+      "aliases": [],
+      "domains": [
+        "wonka.example"
+      ],
+      "visibility": 53.3,
+      "shareOfVoice": 14.7,
+      "avgPosition": 3.9,
+      "score": 24.3,
+      "sentiment": 58.1,
+      "nps": -50,
+      "promoters": 1,
+      "passives": 11,
+      "detractors": 14,
+      "counted": 26,
+      "mentions": 32,
+      "scoredAnswers": 60
+    }
+  ]
+}

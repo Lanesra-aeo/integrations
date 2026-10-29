@@ -1,0 +1,34 @@
+# A scheduled workflow that posts the weekly AI-visibility report to Slack.
+#
+# To use it in your own repository:
+#   1. Copy examples/python/lanesra.py, notify.py and weekly_report.py into scripts/lanesra/.
+#   2. Copy this file to .github/workflows/weekly-visibility-report.yml.
+#   3. Add two repository secrets: LANESRA_API_KEY (a key of its own, from
+#      Integrations → API keys) and SLACK_WEBHOOK_URL (a Slack incoming webhook).
+#   4. If the key reads several projects, add a repository variable LANESRA_PROJECT.
+name: Weekly AI visibility report
+
+on:
+  schedule:
+    - cron: "0 8 * * 1" # Mondays at 08:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Post the report
+        working-directory: scripts/lanesra
+        env:
+          LANESRA_API_KEY: ${{ secrets.LANESRA_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          LANESRA_PROJECT: ${{ vars.LANESRA_PROJECT }}
+        run: python weekly_report.py

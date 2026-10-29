@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lanesra": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://app.lanesra.ai/mcp", "--header", "Authorization:Bearer lns_live_your_key_here"]
+    }
+  }
+}

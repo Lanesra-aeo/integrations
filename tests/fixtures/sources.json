@@ -1,0 +1,104 @@
+{
+  "project": "acme",
+  "locale": "en-US",
+  "market": "United States",
+  "language": "en",
+  "brand": "Acme",
+  "capturedAt": "2026-08-10T07:46:33.726Z",
+  "period": {
+    "kind": "range",
+    "from": "2026-08-01",
+    "to": "2026-08-31",
+    "run": null,
+    "limitedRunAnswers": null
+  },
+  "answers": 60,
+  "scope": "discovery",
+  "engines": [
+    "ChatGPT",
+    "Perplexity",
+    "Gemini"
+  ],
+  "domains": [
+    {
+      "domain": "site-1.example",
+      "publisher": "third_party",
+      "publisherBrand": null,
+      "answersCiting": 11,
+      "citedInPct": 18.3,
+      "winPct": 36.4,
+      "lossPct": 63.6
+    },
+    {
+      "domain": "site-2.example",
+      "publisher": "third_party",
+      "publisherBrand": null,
+      "answersCiting": 7,
+      "citedInPct": 11.7,
+      "winPct": 28.6,
+      "lossPct": 71.4
+    },
+    {
+      "domain": "site-3.example",
+      "publisher": "third_party",
+      "publisherBrand": null,
+      "answersCiting": 7,
+      "citedInPct": 11.7,
+      "winPct": 57.1,
+      "lossPct": 42.9
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://site.example/page-1",
+      "domain": "site-4.example",
+      "title": "An example page",
+      "answersCiting": 9,
+      "winPct": 22.2,
+      "lossPct": 77.8,
+      "format": null,
+      "formatGroup": null,
+      "publisher": "third_party",
+      "favors": null,
+      "topics": [
+        "Example topic"
+      ],
+      "publishedOn": null,
+      "modifiedOn": null
+    },
+    {
+      "url": "https://site.example/page-2",
+      "domain": "site-5.example",
+      "title": "An example page",
+      "answersCiting": 7,
+      "winPct": 57.1,
+      "lossPct": 42.9,
+      "format": null,
+      "formatGroup": null,
+      "publisher": "third_party",
+      "favors": null,
+      "topics": [
+        "Example topic"
+      ],
+      "publishedOn": null,
+      "modifiedOn": null
+    },
+    {
+      "url": "https://site.example/page-3",
+      "domain": "site-6.example",
+      "title": "An example page",
+      "answersCiting": 6,
+      "winPct": 50,
+      "lossPct": 50,
+      "format": null,
+      "formatGroup": null,
+      "publisher": "third_party",
+      "favors": null,
+      "topics": [
+        "Example topic"
+      ],
+      "publishedOn": null,
+      "modifiedOn": null
+    }
+  ]
+}
